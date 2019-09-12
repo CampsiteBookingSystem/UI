@@ -1,0 +1,31 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+
+import { Icons } from '../../assets/components';
+
+import IconTemplate from './IconTemplate.tsx';
+
+<Meta title="Design System | Icons" parameters={{ order: 3 }} />
+
+# Icons
+
+These are the icons used inside the application.
+Each icon is in `SVG` format so the color can easily be changed.
+Any size can be chosen without affecting the quality of the icon.
+
+## Usage
+
+```jsx
+import { Icon } from '@booking-system/ui';
+
+<Icon className="MyCustomClass" color="var(--color-primary)" width="20" height="16" />;
+```
+
+## Available icons
+
+<Preview>
+  <Icons />
+</Preview>
+
+## Available properties
+
+<Props of={IconTemplate} />

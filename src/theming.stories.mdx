@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import { colors } from './config';
+
+import { Color, Column, Container, Font, Row } from '../assets/components';
+
+<Meta title="Design System | Theming" parameters={{ order: 2 }} />
+
+# Theming
+
+This library has been built with theming in mind as we might distribute modified version to our different partners.
+
+Theming is very easy, all changeable options are defined with CSS variables, the only thing you need to do is overwrite those variables.
+
+## Colors
+
+Here are the variables used in the application together with their default values.
+
+If you want to include the default colors into your application, and afterwards overwrite some of them, you can include this file:
+
+```jsx
+import 'booking-system-ui/lib/styles/colors.css';
+```
+
+<Container>
+  <Row>
+    {Object.keys(colors).map(key => (
+      <Column amount={3}>
+        <Color default={colors[key]} name={key} />
+      </Column>
+    ))}
+  </Row>
+</Container>

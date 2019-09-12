@@ -1,0 +1,104 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+
+import Button from './Button.tsx';
+
+<Meta title="Design System | Components. Button" component={Button} parameters={{ order: 6 }} />
+
+# Button
+
+There are 2 categories of buttons you can choose from:
+
+- **Default** which is a classic, rectangular button.
+- **Rounded** which is a rounder button.
+
+There are 3 types of buttons for each category : **primary**, **secondary** and **danger**.
+
+## Usage
+
+```jsx
+import { Button } from 'booking-system-ui';
+
+<Button
+  scope="default"
+  type="primary"
+  onClick={handleClick}
+>
+  Click here
+</Button>
+```
+
+## Examples
+
+### Button
+
+<Preview>
+  <Story name="Primary button">
+    <Button scope="default" type="primary">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Secondary button">
+    <Button scope="default" type="secondary">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Danger button">
+    <Button scope="default" type="danger">
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+### Loading and disabled button
+
+<Preview>
+  <Story name="Disabled button">
+    <Button scope="default" type="primary" disabled>
+      Click here
+    </Button>
+  </Story>
+  <Story name="Loading button">
+    <Button scope="default" type="primary" loading>
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+### Rounded button
+
+<Preview>
+  <Story name="Primary rounded button">
+    <Button scope="rounded" type="primary">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Secondary rounded button">
+    <Button scope="rounded" type="secondary">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Danger rounded button">
+    <Button scope="rounded" type="danger">
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+### Loading and disabled dashboard button
+
+<Preview>
+  <Story name="Disabled rounded button">
+    <Button scope="rounded" type="primary" disabled>
+      Click here
+    </Button>
+  </Story>
+  <Story name="Loading rounded button">
+    <Button scope="rounded" type="primary" loading>
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+## Available properties
+
+<Props of={Button} />

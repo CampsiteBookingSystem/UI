@@ -1,0 +1,29 @@
+.Container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3rem 40px;
+  box-sizing: border-box;
+}
+
+.Row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px -12px 32px;
+}
+
+.Row:last-child {
+  margin-bottom: 0;
+}
+
+.Column {
+  margin: 12px 12px;
+}
+
+.Column.Column--1\/2 {
+  flex-basis: 50%;
+}
+
+.Column.Column--1\/4 {
+  flex-basis: 25%;
+}

@@ -1,0 +1,93 @@
+{
+  "name": "booking-system-ui",
+  "description": "A React component library used for Booking System's services",
+  "version": "0.0.1",
+  "main": "lib/index",
+  "module": "lib/index",
+  "sideEffects": [
+    "**/index.js",
+    "**/*.css"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/campsite-booking-system/ui"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.2.0-rc.1",
+    "@storybook/addon-actions": "^5.2.0-rc.1",
+    "@storybook/addon-docs": "^5.2.0-rc.1",
+    "@storybook/addon-knobs": "^5.2.0-rc.1",
+    "@storybook/addon-storysource": "^5.2.0-rc.1",
+    "@storybook/addon-viewport": "^5.1.11",
+    "@storybook/addons": "^5.2.0-rc.1",
+    "@storybook/react": "^5.2.0-rc.1",
+    "@storybook/source-loader": "^5.2.0-rc.1",
+    "@types/classnames": "^2.2.9",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.3",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "@types/storybook__addon-actions": "^3.4.3",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
+    "cpx": "^1.5.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-docgen-typescript-loader": "^3.2.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1",
+    "rimraf": "^3.0.0",
+    "styled-components": "^5.0.0-beta.8",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "3.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:lib && yarn copy:css && yarn copy:assets",
+    "build:lib": "tsc",
+    "copy:css": "cpx 'src/**/*.css' lib",
+    "copy:assets": "cpx 'src/assets/**/*' lib/assets",
+    "clean": "rimraf lib",
+    "lint": "tslint 'src/**/*.{tsx,ts}' -e 'src/**/*.{story,stories}.{tsx,ts}'",
+    "storybook": "start-storybook -p 3300 -c .storybook -s ./public --ci",
+    "storybook:build": "build-storybook -c .storybook -s ./public",
+    "storybook:build:docs": "build-storybook -c .storybook/docs -s ./public --docs"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && lint-staged && docker run --rm -v $(pwd):/mnt/app -w /mnt/app node:lts-slim yarn build && git add lib/"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

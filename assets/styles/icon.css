@@ -1,0 +1,23 @@
+.Icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Icon__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: 0 10px 24px 0 rgba(0,0,0,.06), 0 2px 9px 0 rgba(0,0,0,.01);
+}
+
+.Icon__label {
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: var(--color-dark-slate-blue);
+  font-size: 13px;
+}
