@@ -2,7 +2,11 @@ import React from 'react';
 import { configure, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 
+import 'sanitize.css/sanitize.css';
+import 'sanitize.css/forms.css';
+
 import '../../src/styles/colors.css';
+import '../../src/styles/fonts/open-sans.css';
 
 import '../../assets/styles/style.css';
 import '../../assets/styles/grid.css';

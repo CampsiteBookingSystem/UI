@@ -1,6 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
+import Spinner from '../Spinner';
+
 import './Button.css';
 
 export type Scope = 'default' | 'rounded';
@@ -56,6 +58,9 @@ function Button(props: Props) {
   return (
     <button id={props.id} className={classes} onClick={props.onClick}>
       {props.children}
+      <span className="BS-Button__loader">
+        <Spinner size="16px" />
+      </span>
     </button>
   );
 }

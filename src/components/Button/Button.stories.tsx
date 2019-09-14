@@ -16,7 +16,7 @@ export const button = () => {
     Danger: 'danger',
   };
 
-  const scope = 'button' as Scope;
+  const scope = 'default' as Scope;
   const type = radios('Type', types, 'primary') as Type;
 
   const props: any = {
@@ -27,7 +27,7 @@ export const button = () => {
     onClick: action('CLICK'),
   };
 
-  const label = text('Label', 'Lancez votre simulation');
+  const label = text('Label', 'Click here');
 
   return (
     <div className="Container">
@@ -45,7 +45,7 @@ export const rounded = () => {
     Danger: 'danger',
   };
 
-  const scope = 'danger' as Scope;
+  const scope = 'rounded' as Scope;
   const type = radios('Type', types, 'primary') as Type;
 
   const props: any = {
@@ -56,7 +56,7 @@ export const rounded = () => {
     onClick: action('CLICK'),
   };
 
-  const label = text('Label', 'Procéder au paiement');
+  const label = text('Label', 'Click here');
 
   return (
     <div className="Container">

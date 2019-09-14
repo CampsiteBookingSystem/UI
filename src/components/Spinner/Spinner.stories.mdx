@@ -1,0 +1,35 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+
+import Spinner from './Spinner.tsx';
+
+<Meta title="Design System | Components. Spinner" component={Spinner} parameters={{ order: 7 }} />
+
+# Spinner
+
+## Usage
+
+```jsx
+import { Spinner } from 'booking-system-ui';
+
+<Spinner coor="#ffffff" />;
+```
+
+## Examples
+
+### Spinner
+
+<Preview>
+  <Story name="Primary spinner">
+    <Spinner color="var(--color-primary)" />
+  </Story>
+  <Story name="Secondary spinner">
+    <Spinner color="var(--color-secondary)" />
+  </Story>
+  <Story name="Danger spinner">
+    <Spinner color="var(--color-danger)" />
+  </Story>
+</Preview>
+
+## Available properties
+
+<Props of={Spinner} />
