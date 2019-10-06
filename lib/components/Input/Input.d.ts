@@ -2,11 +2,11 @@ import './Input.css';
 export declare type Type = 'text' | 'number' | 'password' | 'email' | 'tel';
 export declare type Theme = 'default' | 'primary';
 interface Props {
-    id: string;
+    id?: string;
     className?: string;
     name: string;
     type: Type;
-    theme: Theme;
+    theme?: Theme;
     label: string;
     placeholder?: string;
     initialValue?: string;
@@ -22,6 +22,7 @@ interface Props {
 declare function Input(props: Props): JSX.Element;
 declare namespace Input {
     var defaultProps: {
+        theme: string;
         initialValue: string;
         required: boolean;
         disabled: boolean;

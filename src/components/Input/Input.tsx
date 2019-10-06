@@ -12,7 +12,7 @@ interface Props {
   /**
    * ID of the input
    */
-  id: string;
+  id?: string;
   /**
    * Aditionnal custom classes
    */
@@ -28,7 +28,7 @@ interface Props {
   /**
    * Theme of the input
    */
-  theme: Theme;
+  theme?: Theme;
   /**
    * Input label
    */
@@ -191,6 +191,7 @@ function Input(props: Props) {
 }
 
 Input.defaultProps = {
+  theme: 'default',
   initialValue: '',
   required: false,
   disabled: false,
