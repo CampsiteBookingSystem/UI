@@ -1,0 +1,152 @@
+.BS-Input {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  transition: padding 0.3s ease;
+}
+
+.BS-Input__input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 14px 14px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-grey-border);
+  border-radius: 4px;
+  z-index: 1;
+
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.BS-Input__label {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  padding: 0 4px;
+  background-color: #ffffff;
+  color: var(--color-text-grey);
+  font-size: 14px;
+  z-index: 0;
+
+  transition: color 0.3s ease;
+}
+
+.BS-Input__input {
+  position: relative;
+  width: 100%;
+  border: none;
+  padding: 0;
+  color: var(--color-text);
+  font-size: 16px;
+  z-index: 1;
+}
+
+.BS-Input__input::placeholder {
+  color: var(--color-grey--light);
+}
+
+.BS-Input__error-container {
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+}
+
+.BS-Input__error {
+  color: var(--color-error);
+  font-size: 14px;
+  z-index: 0;
+}
+
+.BS-Input__action {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 24px;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.BS-Input__action:focus {
+  outline: none;
+}
+
+.BS-Input__action.BS-Input__action--password::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text-grey);
+  transform: rotate(-45deg);
+
+  transition: right 0.3s ease, width 0.3s ease;
+}
+
+.BS-Input__action .BS-Icon__fill {
+  fill: var(--color-text-grey);
+}
+
+.BS-Input__action.BS-Input__action--clear {
+  opacity: 0;
+  transform: translateX(6px);
+  pointer-events: none;
+}
+
+/* PRIMARY THEME */
+.BS-Input.BS-Input--primary .BS-Input__input-container {
+  border-color: var(--color-primary);
+}
+
+.BS-Input.BS-Input--primary .BS-Input__label {
+  color: var(--color-primary);
+}
+
+.BS-Input.BS-Input--primary .BS-Input__action .BS-Icon__fill {
+  fill: var(--color-primary);
+}
+
+/* HAS VALUE STATE */
+.BS-Input.BS-Input--has-value .BS-Input__action.BS-Input__action--clear {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+/* ERROR STATE */
+.BS-Input.BS-Input--has-error .BS-Input__input-container {
+  border-color: var(--color-error);
+}
+
+.BS-Input.BS-Input--has-error .BS-Input__label {
+  color: var(--color-error);
+}
+
+.BS-Input.BS-Input--has-error {
+  padding-bottom: 24px;
+}
+
+/* FOCUSSED STATE */
+.BS-Input__input:focus {
+  outline: none;
+}
+
+/* DISABLED STATE */
+.BS-Input.BS-Input--is-disabled .BS-Input__input-container {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* PASSWORD VISIBLE STATE */
+.BS-Input.BS-Input--password-is-visible .BS-Input__action.BS-Input__action--password::after {
+  right: -1px;
+  width: 26px;
+}

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import './Spinner.css';
 interface Props {
     className?: string;

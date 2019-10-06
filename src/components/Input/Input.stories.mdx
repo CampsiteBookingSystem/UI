@@ -1,0 +1,74 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+
+import Input from './Input.tsx';
+
+<Meta title="Design System | Components. Form. Input" component={Input} parameters={{ order: 7 }} />
+
+# Input
+
+## Usage
+
+```jsx
+import { Input } from 'booking-system-ui';
+
+<Input type="text" />;
+```
+
+## Examples
+
+### Default
+
+<Preview>
+  <Story name="Default">
+    <Input type="text" label="Establishment name" />
+  </Story>
+</Preview>
+
+### With initial value
+
+<Preview>
+  <Story name="With default value">
+    <Input type="text" label="Establishment name" initialValue="Campsite name" />
+  </Story>
+</Preview>
+
+### Disabled
+
+<Preview>
+  <Story name="Disabled">
+    <Input type="text" label="Establishment name" initialValue="Campsite name" disabled />
+  </Story>
+</Preview>
+
+### With error
+
+<Preview>
+  <Story name="With error">
+    <Input
+      type="text"
+      label="Establishment name"
+      initialValue="Campsite name"
+      error="This value is invalid"
+    />
+  </Story>
+</Preview>
+
+### With clear button
+
+<Preview>
+  <Story name="With clear button">
+    <Input type="text" label="Establishment name" initialValue="Campsite name" canClear={true} />
+  </Story>
+</Preview>
+
+### With password toggle
+
+<Preview>
+  <Story name="With password toggle">
+    <Input type="password" label="Password" initialValue="MyVerySecurePassword" canTogglePassword />
+  </Story>
+</Preview>
+
+## Available properties
+
+<Props of={Input} />
