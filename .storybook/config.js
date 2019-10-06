@@ -4,9 +4,6 @@ import { create } from '@storybook/theming';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs/react';
 
-import 'sanitize.css/sanitize.css';
-import 'sanitize.css/forms.css';
-
 import '../src/styles/colors.css';
 import '../src/styles/fonts/open-sans.css';
 

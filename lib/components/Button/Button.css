@@ -1,0 +1,203 @@
+.BS-Button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.BS-Button.BS-Button--disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.BS-Button.BS-Button--loading {
+  cursor: default;
+  pointer-events: none;
+}
+
+.BS-Button__loader {
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * SCOPE: DEFAULT
+ */
+.BS-Button.BS-Button--default {
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 14px;
+
+  transition: background-color 0.3s ease, padding 0.3s ease 0.3s, opacity 0.3s ease;
+}
+
+.BS-Button.BS-Button--default.BS-Button--disabled {
+  opacity: 0.5;
+}
+
+.BS-Button.BS-Button--default .BS-Button__loader {
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+
+  transition: right 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0s;
+}
+
+.BS-Button.BS-Button--default.BS-Button--loading {
+  padding-right: 56px;
+  opacity: 0.5;
+
+  transition-delay: 0s;
+}
+
+.BS-Button.BS-Button--default.BS-Button--loading .BS-Button__loader {
+  right: 30px;
+  opacity: 1;
+
+  transition-delay: 0.3s;
+}
+
+/*
+ * SCOPE: DEFAULT
+ * TYPE: PRIMARY
+ */
+.BS-Button.BS-Button--default.BS-Button--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--default.BS-Button--primary:hover {
+  background-color: var(--color-primary--hover);
+}
+
+.BS-Button.BS-Button--default.BS-Button--primary .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}
+
+/*
+ * SCOPE: DEFAULT
+ * TYPE: SECONDARY
+ */
+.BS-Button.BS-Button--default.BS-Button--secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--default.BS-Button--secondary:hover {
+  background-color: var(--color-secondary--hover);
+}
+
+.BS-Button.BS-Button--default.BS-Button--secondary .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}
+
+/*
+ * SCOPE: DEFAULT
+ * TYPE: DANGER
+ */
+.BS-Button.BS-Button--default.BS-Button--danger {
+  background-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--default.BS-Button--danger:hover {
+  background-color: var(--color-danger--hover);
+}
+
+.BS-Button.BS-Button--default.BS-Button--danger .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}
+
+/*
+ * SCOPE: ROUNDED
+ */
+.BS-Button.BS-Button--rounded {
+  padding: 10px 30px;
+  border-radius: 24px;
+  font-size: 14px;
+
+  transition: background-color 0.3s ease, padding 0.3s ease 0.3s, opacity 0.3s ease;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--disabled {
+  opacity: 0.5;
+}
+
+.BS-Button.BS-Button--rounded .BS-Button__loader {
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+
+  transition: right 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0s;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--loading {
+  padding-right: 56px;
+  opacity: 0.5;
+
+  transition-delay: 0s;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--loading .BS-Button__loader {
+  right: 30px;
+  opacity: 1;
+
+  transition-delay: 0.3s;
+}
+
+/*
+ * SCOPE: ROUNDED
+ * TYPE: PRIMARY
+ */
+.BS-Button.BS-Button--rounded.BS-Button--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--primary:hover {
+  background-color: var(--color-primary--hover);
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--primary .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}
+
+/*
+ * SCOPE: ROUNDED
+ * TYPE: SECONDARY
+ */
+.BS-Button.BS-Button--rounded.BS-Button--secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--secondary:hover {
+  background-color: var(--color-secondary--hover);
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--secondary .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}
+
+/*
+ * SCOPE: ROUNDED
+ * TYPE: DANGER
+ */
+.BS-Button.BS-Button--rounded.BS-Button--danger {
+  background-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--danger:hover {
+  background-color: var(--color-danger--hover);
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--danger .BS-Spinner {
+  border-color: #ffffff transparent #ffffff #ffffff;
+}

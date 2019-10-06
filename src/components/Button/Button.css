@@ -50,6 +50,7 @@
 
 .BS-Button.BS-Button--default.BS-Button--loading {
   padding-right: 56px;
+  opacity: 0.5;
 
   transition-delay: 0s;
 }
@@ -138,6 +139,7 @@
 
 .BS-Button.BS-Button--rounded.BS-Button--loading {
   padding-right: 56px;
+  opacity: 0.5;
 
   transition-delay: 0s;
 }
