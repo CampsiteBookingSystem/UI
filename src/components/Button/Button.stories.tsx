@@ -2,7 +2,7 @@ import React from 'react';
 import { text, radios, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Button, { Scope, Type } from './Button';
+import Button, { Scope, Type, Size } from './Button';
 
 export default {
   title: 'Playground | Button',
@@ -16,12 +16,20 @@ export const button = () => {
     Danger: 'danger',
   };
 
+  const sizes = {
+    Small: 'small',
+    Default: 'default',
+    Large: 'large',
+  };
+
   const scope = 'default' as Scope;
   const type = radios('Type', types, 'primary') as Type;
+  const size = radios('Size', sizes, 'default') as Size;
 
   const props: any = {
     scope,
     type,
+    size,
     disabled: boolean('Disabled', false),
     loading: boolean('Loading', false),
     onClick: action('CLICK'),
@@ -45,12 +53,20 @@ export const rounded = () => {
     Danger: 'danger',
   };
 
+  const sizes = {
+    Small: 'small',
+    Default: 'default',
+    Large: 'large',
+  };
+
   const scope = 'rounded' as Scope;
   const type = radios('Type', types, 'primary') as Type;
+  const size = radios('Size', sizes, 'default') as Size;
 
   const props: any = {
     scope,
     type,
+    size,
     disabled: boolean('Disabled', false),
     loading: boolean('Loading', false),
     onClick: action('CLICK'),

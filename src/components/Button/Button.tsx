@@ -7,6 +7,7 @@ import './Button.css';
 
 export type Scope = 'default' | 'rounded';
 export type Type = 'primary' | 'secondary' | 'warning';
+export type Size = 'small' | 'default' | 'large';
 
 interface Props {
   /**
@@ -30,6 +31,12 @@ interface Props {
    */
   type?: Type;
   /**
+   * Type of button
+   * ["small", "default", "large"]
+   * @default default
+   */
+  size?: Size;
+  /**
    * Is the button disabled ?
    * @default false
    */
@@ -51,6 +58,7 @@ function Button(props: Props) {
     [props.className]: props.className !== undefined,
     [`BS-Button--${props.scope}`]: props.scope !== undefined,
     [`BS-Button--${props.type}`]: props.type !== undefined,
+    [`BS-Button--${props.size}`]: props.size !== undefined,
     'BS-Button--disabled': props.disabled,
     'BS-Button--loading': props.loading,
   });
@@ -68,6 +76,7 @@ function Button(props: Props) {
 Button.defaultProps = {
   scope: 'default',
   type: 'primary',
+  size: 'default',
   disabled: false,
   loading: false,
 };

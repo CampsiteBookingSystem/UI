@@ -13,23 +13,39 @@ There are 2 categories of buttons you can choose from:
 
 There are 3 types of buttons for each category : **primary**, **secondary** and **danger**.
 
+Each button is available in 3 sizes : **small**, **default** and **large**.
+
 ## Usage
 
 ```jsx
 import { Button } from 'booking-system-ui';
 
-<Button
-  scope="default"
-  type="primary"
-  onClick={handleClick}
->
+<Button scope="default" type="primary" onClick={handleClick}>
   Click here
-</Button>
+</Button>;
 ```
 
 ## Examples
 
 ### Button
+
+<Preview>
+  <Story name="Small Primary button">
+    <Button scope="default" type="primary" size="small">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Small Secondary button">
+    <Button scope="default" type="secondary" size="small">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Small Danger button">
+    <Button scope="default" type="danger" size="small">
+      Click here
+    </Button>
+  </Story>
+</Preview>
 
 <Preview>
   <Story name="Primary button">
@@ -44,6 +60,24 @@ import { Button } from 'booking-system-ui';
   </Story>
   <Story name="Danger button">
     <Button scope="default" type="danger">
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Large Primary button">
+    <Button scope="default" type="primary" size="large">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Large Secondary button">
+    <Button scope="default" type="secondary" size="large">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Large Danger button">
+    <Button scope="default" type="danger" size="large">
       Click here
     </Button>
   </Story>
@@ -67,6 +101,24 @@ import { Button } from 'booking-system-ui';
 ### Rounded button
 
 <Preview>
+  <Story name="Small Primary rounded button">
+    <Button scope="rounded" type="primary" size="small">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Small Secondary rounded button">
+    <Button scope="rounded" type="secondary" size="small">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Small Danger rounded button">
+    <Button scope="rounded" type="danger" size="small">
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+<Preview>
   <Story name="Primary rounded button">
     <Button scope="rounded" type="primary">
       Click here
@@ -79,6 +131,24 @@ import { Button } from 'booking-system-ui';
   </Story>
   <Story name="Danger rounded button">
     <Button scope="rounded" type="danger">
+      Click here
+    </Button>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Large Primary rounded button">
+    <Button scope="rounded" type="primary" size="large">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Large Secondary rounded button">
+    <Button scope="rounded" type="secondary" size="large">
+      Click here
+    </Button>
+  </Story>
+  <Story name="Large Danger rounded button">
+    <Button scope="rounded" type="danger" size="large">
       Click here
     </Button>
   </Story>
