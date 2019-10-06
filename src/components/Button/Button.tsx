@@ -64,7 +64,7 @@ function Button(props: Props) {
   });
 
   return (
-    <button id={props.id} className={classes} onClick={props.onClick}>
+    <button type="button" id={props.id} className={classes} onClick={props.onClick}>
       {props.children}
       <span className="BS-Button__loader">
         <Spinner size="16px" />

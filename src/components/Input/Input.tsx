@@ -171,6 +171,7 @@ function Input(props: Props) {
         <span className="BS-Input__label">{props.label}</span>
         {props.type === 'password' && (
           <button
+            type="button"
             className="BS-Input__action BS-Input__action--password"
             onClick={handlePasswordVisibilityClick}
           >
@@ -178,7 +179,11 @@ function Input(props: Props) {
           </button>
         )}
         {props.type !== 'password' && props.canClear && (
-          <button className="BS-Input__action BS-Input__action--clear" onClick={handleClearClick}>
+          <button
+            type="button"
+            className="BS-Input__action BS-Input__action--clear"
+            onClick={handleClearClick}
+          >
             <Clear />
           </button>
         )}
