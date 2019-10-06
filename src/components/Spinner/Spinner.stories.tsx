@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, select } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import Spinner from './Spinner';
 
