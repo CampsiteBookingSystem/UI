@@ -25,7 +25,7 @@ import 'booking-system-ui/lib/styles/colors.css';
 <Container>
   <Row>
     {Object.keys(colors).map(key => (
-      <Column amount={3}>
+      <Column key={key} amount={3}>
         <Color default={colors[key]} name={key} />
       </Column>
     ))}
@@ -37,7 +37,7 @@ import 'booking-system-ui/lib/styles/colors.css';
 If you want to include the default fonts into your application, import the following file:
 
 ```jsx
-import 'mieuxplacer-ui/lib/styles/fonts/open-sans.css';
+import 'booking-system-ui/lib/styles/fonts/open-sans.css';
 ```
 
 These are the fonts included with the file:
