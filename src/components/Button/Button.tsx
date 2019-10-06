@@ -5,8 +5,9 @@ import Spinner from '../Spinner';
 
 import './Button.css';
 
+export type Type = 'button' | 'reset' | 'submit';
 export type Scope = 'default' | 'rounded';
-export type Type = 'primary' | 'secondary' | 'warning';
+export type Variant = 'primary' | 'secondary' | 'warning';
 export type Size = 'small' | 'default' | 'large';
 
 interface Props {
@@ -19,19 +20,25 @@ interface Props {
    */
   className?: string;
   /**
+   * Type of button
+   * ["button", "reset" or "submit"]
+   * @default button
+   */
+  type?: Type;
+  /**
    * Scope of the component
    * ["default" or "rounded"]
    * @default default
    */
-  scope: Scope;
+  scope?: Scope;
   /**
-   * Type of button
+   * Variant of button
    * ["primary", "secondary" or "danger"]
    * @default primary
    */
-  type?: Type;
+  variant?: Variant;
   /**
-   * Type of button
+   * Size of the button
    * ["small", "default", "large"]
    * @default default
    */
@@ -57,14 +64,14 @@ function Button(props: Props) {
   const classes = classNames('BS-Button', {
     [props.className]: props.className !== undefined,
     [`BS-Button--${props.scope}`]: props.scope !== undefined,
-    [`BS-Button--${props.type}`]: props.type !== undefined,
+    [`BS-Button--${props.variant}`]: props.variant !== undefined,
     [`BS-Button--${props.size}`]: props.size !== undefined,
     'BS-Button--disabled': props.disabled,
     'BS-Button--loading': props.loading,
   });
 
   return (
-    <button type="button" id={props.id} className={classes} onClick={props.onClick}>
+    <button type={props.type} id={props.id} className={classes} onClick={props.onClick}>
       {props.children}
       <span className="BS-Button__loader">
         <Spinner size="16px" />
@@ -74,8 +81,9 @@ function Button(props: Props) {
 }
 
 Button.defaultProps = {
+  type: 'button',
   scope: 'default',
-  type: 'primary',
+  variant: 'primary',
   size: 'default',
   disabled: false,
   loading: false,

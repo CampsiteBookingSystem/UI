@@ -2,7 +2,7 @@ import React from 'react';
 import { text, radios, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Button, { Scope, Type, Size } from './Button';
+import Button, { Scope, Variant, Size } from './Button';
 
 export default {
   title: 'Playground | Button',
@@ -10,7 +10,7 @@ export default {
 };
 
 export const button = () => {
-  const types = {
+  const variants = {
     Primary: 'primary',
     Secondary: 'secondary',
     Danger: 'danger',
@@ -23,12 +23,12 @@ export const button = () => {
   };
 
   const scope = 'default' as Scope;
-  const type = radios('Type', types, 'primary') as Type;
+  const variant = radios('Variant', variants, 'primary') as Variant;
   const size = radios('Size', sizes, 'default') as Size;
 
   const props: any = {
     scope,
-    type,
+    variant,
     size,
     disabled: boolean('Disabled', false),
     loading: boolean('Loading', false),
@@ -47,7 +47,7 @@ export const button = () => {
 };
 
 export const rounded = () => {
-  const types = {
+  const variants = {
     Primary: 'primary',
     Secondary: 'secondary',
     Danger: 'danger',
@@ -60,12 +60,12 @@ export const rounded = () => {
   };
 
   const scope = 'rounded' as Scope;
-  const type = radios('Type', types, 'primary') as Type;
+  const variant = radios('Variant', variants, 'primary') as Variant;
   const size = radios('Size', sizes, 'default') as Size;
 
   const props: any = {
     scope,
-    type,
+    variant,
     size,
     disabled: boolean('Disabled', false),
     loading: boolean('Loading', false),
