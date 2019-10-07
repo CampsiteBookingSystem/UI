@@ -1,17 +1,19 @@
 {
-  "name": "booking-system-ui",
-  "description": "A React component library used for Booking System's services",
-  "version": "0.0.1",
+  "name": "@owlnite/ui",
+  "description": "A React component library used for OwlNite's services",
+  "version": "0.1.0",
   "main": "lib/index",
   "module": "lib/index",
   "sideEffects": [
     "**/index.js",
     "**/*.css"
   ],
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/campsite-booking-system/ui"
+    "url": "https://github.com/owlnite/UI"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "classnames": "^2.2.6"
