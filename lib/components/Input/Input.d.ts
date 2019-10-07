@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import './Input.css';
 export declare type Type = 'text' | 'number' | 'password' | 'email' | 'tel';
 export declare type Theme = 'default' | 'primary';

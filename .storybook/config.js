@@ -19,8 +19,8 @@ addParameters({
     theme: create({
       base: 'light',
 
-      brandTitle: 'Booking System UI',
-      brandUrl: 'https://ui.booking-system.co',
+      brandTitle: 'OwlNite UI',
+      brandUrl: 'https://ui.owlnite.com',
     }),
   },
   options: {

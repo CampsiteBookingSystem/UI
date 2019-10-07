@@ -2,40 +2,30 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Design System | Intro" parameters={{ order: 1 }} />
 
-# Booking System UI
+# OwlNite UI
 
-Booking System UI is a React component library used for our front-end applications.
+OwlNite UI is a React component library used for our front-end applications.
 This library will be continuously updated when we add new components to our applications.
 
 ## Installation
 
 At the moment, the library is only available through Github while we develop the library.
 
-- Install the dependency with `yarn` or `npm` :
+- Install the dependency with `npm` :
 
 ```bash
-yarn add git+ssh://git@github.com:CampsiteBookingSystem/UI.git#X.Y.Z
+npm install @owlnite/ui
 ```
-
-_`X.Y.Z` stands for the version of the library to install. The latest version can be found [here](https://github.com/CampsiteBookingSystem/UI/releases). We recommend installing a specific version as this library might change regularly._
 
 ### Use
 
 Import components you want into your UI
 
 ```jsx
-import { Button } from 'booking-system-ui';
+import { Button } from '@owlnite/ui';
 ```
 
 You can find individual documentation about how to use each component in the **Components** folder.
-
-### Update
-
-To update the library, just install the latest version.
-
-```bash
-yarn add git+ssh://git@github.com/CampsiteBookingSystem/UI.git#X.Y.Z
-```
 
 ## Development & Playground
 
@@ -44,20 +34,20 @@ To execute changes or add new components, you need to locally install the librar
 - Clone the repository from Github
 
 ```bash
-git clone git@github.com:CampsiteBookingSystem/UI.git
+git clone git@github.com:owlnite/ui.git
 ```
 
 - Install the dependencies
 
 ```bash
-cd UI
-yarn
+cd ui
+npm install
 ```
 
 - Start the development server
 
 ```bash
-yarn storybook
+npm start storybook
 ```
 
 This Storybook has a playground where you can play with the different components and try out the different properties.

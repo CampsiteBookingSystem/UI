@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import './Icon.css';
 interface Props {
     className?: string;

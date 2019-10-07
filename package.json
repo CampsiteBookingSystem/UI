@@ -1,7 +1,7 @@
 {
   "name": "@owlnite/ui",
   "description": "A React component library used for OwlNite's services",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index",
   "module": "lib/index",
   "sideEffects": [
@@ -65,7 +65,7 @@
     "react": "^16.9.0"
   },
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn copy:css && yarn copy:assets",
+    "build": "npm run clean && npm run build:lib && npm run copy:css && npm run copy:assets",
     "build:lib": "tsc",
     "copy:css": "cpx 'src/**/*.css' lib",
     "copy:assets": "cpx 'src/assets/**/*' lib/assets",
@@ -83,7 +83,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && lint-staged && docker run --rm -v $(pwd):/mnt/app -w /mnt/app node:lts-slim yarn build && git add lib/"
+      "pre-commit": "npm run lint && lint-staged && docker run --rm -v $(pwd):/mnt/app -w /mnt/app node:lts-slim npm run build && git add lib/"
     }
   },
   "lint-staged": {
