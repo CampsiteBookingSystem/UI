@@ -1,7 +1,7 @@
 {
   "name": "@owlnite/ui",
   "description": "A React component library used for OwlNite's services",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "lib/index",
   "module": "lib/index",
   "sideEffects": [
