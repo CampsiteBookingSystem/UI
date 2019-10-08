@@ -13,7 +13,8 @@ interface Props {
     initialValue?: string;
     required?: boolean;
     disabled?: boolean;
-    error?: string;
+    error?: boolean;
+    errorMessage?: string;
     emptyErrorMessage?: string;
     canClear?: boolean;
     canTogglePassword?: boolean;
@@ -28,6 +29,7 @@ declare namespace Input {
         required: boolean;
         disabled: boolean;
         canClear: boolean;
+        error: boolean;
         emptyErrorMessage: string;
     };
 }

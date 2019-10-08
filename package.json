@@ -1,7 +1,7 @@
 {
   "name": "@vulpee/ui",
   "description": "A React component library used for Vulpee's services",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "lib/index",
   "module": "lib/index",
   "sideEffects": [

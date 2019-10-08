@@ -72,6 +72,18 @@
   font-size: 14px;
 }
 
+.BS-Button.BS-Button--default.BS-Button--small .BS-Button__loader {
+  right: 10px;
+}
+
+.BS-Button.BS-Button--default.BS-Button--small.BS-Button--loading {
+  padding-right: 46px;
+}
+
+.BS-Button.BS-Button--default.BS-Button--small.BS-Button--loading .BS-Button__loader {
+  right: 20px;
+}
+
 /* 
  * SCOPE: DEFAULT
  * SIZE: LARGE
@@ -79,6 +91,18 @@
 .BS-Button.BS-Button--default.BS-Button--large {
   padding: 18px 40px;
   font-size: 16px;
+}
+
+.BS-Button.BS-Button--default.BS-Button--large .BS-Button__loader {
+  right: 30px;
+}
+
+.BS-Button.BS-Button--default.BS-Button--large.BS-Button--loading {
+  padding-right: 66px;
+}
+
+.BS-Button.BS-Button--default.BS-Button--large.BS-Button--loading .BS-Button__loader {
+  right: 40px;
 }
 
 /*
@@ -180,6 +204,18 @@
   border-radius: 20px;
 }
 
+.BS-Button.BS-Button--rounded.BS-Button--small .BS-Button__loader {
+  right: 10px;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--small.BS-Button--loading {
+  padding-right: 46px;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--small.BS-Button--loading .BS-Button__loader {
+  right: 20px;
+}
+
 /* 
  * SCOPE: ROUNDED
  * SIZE: LARGE
@@ -188,6 +224,18 @@
   padding: 18px 40px;
   font-size: 16px;
   border-radius: 30px;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--large .BS-Button__loader {
+  right: 30px;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--large.BS-Button--loading {
+  padding-right: 66px;
+}
+
+.BS-Button.BS-Button--rounded.BS-Button--large.BS-Button--loading .BS-Button__loader {
+  right: 40px;
 }
 
 /*
