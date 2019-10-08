@@ -52,9 +52,13 @@ interface Props {
    */
   disabled?: boolean;
   /**
+   * Is in error state ?
+   */
+  error?: boolean;
+  /**
    * Error message
    */
-  error?: string;
+  errorMessage?: string;
   /**
    * Error message when value is empty
    */
@@ -104,7 +108,7 @@ function Input(props: Props) {
 
   React.useEffect(() => {
     if (props.error) {
-      setErrorMessage(props.error);
+      setErrorMessage(props.errorMessage);
       setHasError(true);
     } else if (props.required && isDirty && value === '') {
       setErrorMessage(props.emptyErrorMessage);
@@ -112,7 +116,7 @@ function Input(props: Props) {
     } else {
       setHasError(false);
     }
-  }, [props.required, props.error, props.emptyErrorMessage, isDirty, value]);
+  }, [props.required, props.error, props.errorMessage, props.emptyErrorMessage, isDirty, value]);
 
   React.useEffect(() => {
     if (errorContainer.current) {
@@ -165,7 +169,9 @@ function Input(props: Props) {
   return (
     <div
       className={classes}
-      style={{ paddingBottom: hasError ? `${errorContainerHeight + 4}px` : 0 }}
+      style={{
+        paddingBottom: hasError && errorMessage ? `${errorContainerHeight + 4}px` : 0,
+      }}
     >
       <label className="BS-Input__input-container" htmlFor={props.id}>
         <input
@@ -213,6 +219,7 @@ Input.defaultProps = {
   required: false,
   disabled: false,
   canClear: false,
+  error: false,
   emptyErrorMessage: 'Ce champs est requis.',
 };
 

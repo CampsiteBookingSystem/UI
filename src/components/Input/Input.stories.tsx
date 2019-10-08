@@ -34,7 +34,8 @@ export const input = () => {
     required: boolean('Required ?', true),
     disabled: boolean('Disabled ?', false),
     canClear: boolean('Can clear ?', false),
-    error: text('Error message', ''),
+    error: boolean('Has error ?', false),
+    errorMessage: text('Error message', ''),
     onBlur: action('BLUR'),
     onChange: action('CHANGE'),
   };
