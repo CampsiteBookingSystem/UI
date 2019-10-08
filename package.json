@@ -1,6 +1,6 @@
 {
-  "name": "@owlnite/ui",
-  "description": "A React component library used for OwlNite's services",
+  "name": "@vulpee/ui",
+  "description": "A React component library used for Vulpee's services",
   "version": "0.1.2",
   "main": "lib/index",
   "module": "lib/index",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/owlnite/UI"
+    "url": "https://github.com/vulpee/ui"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

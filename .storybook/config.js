@@ -19,8 +19,8 @@ addParameters({
     theme: create({
       base: 'light',
 
-      brandTitle: 'OwlNite UI',
-      brandUrl: 'https://ui.owlnite.com',
+      brandTitle: 'Vulpee UI',
+      brandUrl: 'https://ui.vulpee.com',
     }),
   },
   options: {
