@@ -1,5 +1,5 @@
 import React from 'react';
-import { text } from '@storybook/addon-knobs';
+import { radios, text } from '@storybook/addon-knobs';
 
 import Spinner from './Spinner';
 
