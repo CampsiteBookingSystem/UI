@@ -86,6 +86,9 @@ function Input(props: Props) {
   const [isDirty, setIsDirty] = React.useState<boolean>(false);
   const [hasError, setHasError] = React.useState<boolean>(false);
   const [errorMessage, setErrorMessage] = React.useState<string>('');
+  const [errorContainerHeight, setErrorContainerHeight] = React.useState<number>(0);
+
+  const errorContainer = React.useRef<HTMLDivElement>();
 
   React.useEffect(() => {
     if (props.onChange !== undefined) {
@@ -110,6 +113,12 @@ function Input(props: Props) {
       setHasError(false);
     }
   }, [props.required, props.error, props.emptyErrorMessage, isDirty, value]);
+
+  React.useEffect(() => {
+    if (errorContainer.current) {
+      setErrorContainerHeight(errorContainer.current.clientHeight);
+    }
+  }, [errorMessage]);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     setValue(event.target.value);
@@ -154,7 +163,10 @@ function Input(props: Props) {
   }
 
   return (
-    <div className={classes}>
+    <div
+      className={classes}
+      style={{ paddingBottom: hasError ? `${errorContainerHeight + 4}px` : 0 }}
+    >
       <label className="BS-Input__input-container" htmlFor={props.id}>
         <input
           className="BS-Input__input"
@@ -188,7 +200,7 @@ function Input(props: Props) {
           </button>
         )}
       </label>
-      <div className="BS-Input__error-container">
+      <div ref={errorContainer} className="BS-Input__error-container">
         <p className="BS-Input__error">{errorMessage}</p>
       </div>
     </div>

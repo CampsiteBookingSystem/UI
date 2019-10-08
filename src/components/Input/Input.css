@@ -129,10 +129,6 @@
   color: var(--color-error);
 }
 
-.BS-Input.BS-Input--has-error {
-  padding-bottom: 24px;
-}
-
 /* FOCUSSED STATE */
 .BS-Input__input:focus {
   outline: none;
