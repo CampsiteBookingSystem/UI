@@ -10,7 +10,7 @@ const colors: { [key: string]: string } = {
   '--color-danger--light': '#fef6f6',
 
   '--color-error': '#ef626c',
-  '--color-success': '#afebb9',
+  '--color-success': '#27752f',
 
   '--color-grey': '#4a4a4a',
   '--color-grey--light': '#b9b9b9',
