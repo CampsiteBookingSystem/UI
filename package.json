@@ -4,6 +4,9 @@
   "version": "0.1.5",
   "main": "lib/index",
   "module": "lib/index",
+  "files": [
+    "lib"
+  ],
   "sideEffects": [
     "**/index.js",
     "**/*.css"
@@ -73,7 +76,8 @@
     "lint": "tslint 'src/**/*.{tsx,ts}' -e 'src/**/*.{story,stories}.{tsx,ts}'",
     "storybook": "start-storybook -p 3300 -c .storybook -s ./public --ci",
     "storybook:build": "build-storybook -c .storybook -s ./public",
-    "storybook:build:docs": "build-storybook -c .storybook/docs -s ./public --docs"
+    "storybook:build:docs": "build-storybook -c .storybook/docs -s ./public --docs",
+    "prepare": "docker run --rm -v $(pwd):/mnt/app -w /mnt/app node:lts-slim npm run build"
   },
   "browserslist": [
     ">0.2%",
@@ -83,7 +87,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && lint-staged && docker run --rm -v $(pwd):/mnt/app -w /mnt/app node:lts-slim npm run build && git add lib/"
+      "pre-commit": "npm run lint && lint-staged"
     }
   },
   "lint-staged": {
