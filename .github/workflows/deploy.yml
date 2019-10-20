@@ -17,3 +17,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: bash -i -c "/var/www/vulpee/infrastructure/deploy/ui/dev.sh"
+          command_timeout: 2m
